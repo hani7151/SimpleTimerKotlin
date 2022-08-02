@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -11,21 +11,27 @@
         android:id="@+id/c_meter"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginEnd="35dp"
+        android:layout_marginBottom="35dp"
         android:gravity="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textColor="#092FEC"
         android:textSize="36sp"
-        android:layout_margin="35dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        />
+        app:layout_constraintTop_toTopOf="parent" />
+
 
     <Button
         android:id="@+id/btn_start"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:layout_margin="35dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="27dp"
+        android:layout_marginBottom="503dp"
         android:text="@string/start"
         app:layout_constraintEnd_toStartOf="@+id/btn_reset"
         app:layout_constraintHorizontal_bias="0.5"
@@ -36,15 +42,34 @@
         android:id="@+id/btn_reset"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:layout_margin="35dp"
-        android:visibility="invisible"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="27dp"
+        android:layout_marginBottom="503dp"
         android:text="@string/reset"
+        android:visibility="invisible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/btn_start"
         app:layout_constraintTop_toBottomOf="@id/c_meter" />
 
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".MainActivity" >
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:alpha="0.6"
+            android:scaleType="fitCenter"
+
+            android:src="@drawable/tuwaiq" />
+    </LinearLayout>
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>
+
+
